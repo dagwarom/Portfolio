@@ -3,7 +3,7 @@ body {
   color: #00ff00;
   font-family: monospace;
   padding: 20px;
-  font-size: 18px;   /* 👈 overall font size increased */
+  font-size: 18px;   /* overall font size */
 }
 
 h1, h2 {
@@ -26,7 +26,7 @@ a:hover {
 
 .btn {
   display: inline-block;
-  margin: 8px 5px;   /* 👈 spacing adjusted */
+  margin: 8px 5px;
   padding: 8px 14px;
   color: black;
   background-color: #00ff00;
@@ -41,12 +41,14 @@ a:hover {
 
 /* Typing effect */
 .typing-container {
-  font-size: 28px;  /* 👈 font size increased */
+  font-size: clamp(18px, 5vw, 28px);  /* 👈 responsive font size */
   font-family: monospace;
   color: #00ff00;
-  white-space: pre;
+  white-space: normal;   /* 👈 allow text wrapping */
+  word-wrap: break-word; /* 👈 break long text */
+  overflow-wrap: break-word; /* 👈 modern browsers support */
   margin-bottom: 20px;
-  text-align: center;  /* 👈 center aligned */
+  text-align: center;
 }
 
 .cursor {
@@ -73,12 +75,12 @@ a:hover {
 }
 
 .contact-box h2 {
-  margin: 0 0 8px 0;  /* 👈 gap kam kiya */
+  margin: 0 0 8px 0;
   padding-bottom: 5px;
 }
 
 .contact-box p {
-  margin: 4px 0;  /* 👈 gap between lines kam */
+  margin: 4px 0;
 }
 
 .contact-buttons {
@@ -91,6 +93,8 @@ a:hover {
   margin: 20px auto;
   max-width: 900px;
   font-size: 18px;
+  word-wrap: break-word;       /* 👈 adjust long words */
+  overflow-wrap: break-word;
 }
 
 /* Footer */
